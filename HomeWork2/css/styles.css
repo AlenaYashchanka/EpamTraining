@@ -1,0 +1,22 @@
+body {
+    background-color: #E2ECA7;
+}
+
+#list {
+color: red;
+text-align: center;
+
+}
+
+ul li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+h3 {
+    color: green;
+}
+
+p {
+    font-style: italic;
+}

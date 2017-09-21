@@ -1,0 +1,43 @@
+div {
+    font-size: 70px;
+    text-align: center;
+}
+
+div:nth-child(2) {
+    font-size: 90%;
+}
+
+.Chetn {
+color: red;
+}
+
+.Nechet {
+    color: green;
+}
+
+#Six, 
+#Eight,
+#Ten {
+text-decoration: underline;
+}
+
+/*
+#One,
+#Two,
+#Three,
+#Four {
+    text-transform: lowercase;
+}
+
+#Five,
+#Six,
+#Seven,
+#Eight,
+#Nine,
+#Ten {
+    text-transform: uppercase;
+}
+*/
+
+
+

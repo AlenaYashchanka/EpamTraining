@@ -1,0 +1,36 @@
+div {
+    font-size: 30px;
+    text-align: center;
+}
+
+.Chetn {
+color: red;
+}
+
+.Nechet {
+    color: green;
+}
+
+#Six, 
+#Eight,
+#Ten {
+text-decoration: underline;
+}
+
+#One,
+#Two,
+#Three,
+#Four {
+    text-transform: lowercase;
+}
+
+#Five,
+#Six,
+#Seven,
+#Eight,
+#Nine,
+#Ten {
+    text-transform: uppercase;
+}
+
+

@@ -1,0 +1,61 @@
+label {
+    font-size: 10px;
+    color: #A39D9D;
+}
+
+form {
+    height: 400px;
+    width: 340px;
+    border: 2px groove #CECCCC;
+    /*margin: 0 auto;*/
+}
+
+table {
+    border-top: 2px solid #D3D1D1;
+}
+
+td {
+vertical-align: top;
+}
+
+input {
+    border: none;
+}
+
+.date {
+    width: 250px;
+}
+
+.button1 {
+    margin-left: 220px;  
+    margin-top: 0;
+}
+
+iframe {
+    border: none;
+}
+
+.date:invalid, .time:invalid {
+    border-bottom: 2px solid red;
+    
+}
+
+.labelHidden{
+    visibility: hidden;
+    color: red;
+}
+
+.date:invalid+.labelHidden {
+    visibility: visible;
+}
+
+
+div, label {
+    font-family: Arial;
+}
+
+div {
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 13px;
+}

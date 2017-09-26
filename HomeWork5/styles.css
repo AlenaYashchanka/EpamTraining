@@ -1,0 +1,153 @@
+
+.firstBox {
+    background: url(image1.jpg) no-repeat;
+    background-size: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin: -5px;
+}
+
+.centerBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 460px;
+    height: 100px;
+    background-color: white;
+    opacity: 0.97;
+    /*z-index: 2;*/
+}
+
+p {
+    width: 440px;
+    height: 80px;
+    background-color: white;
+    opacity: 0.97;
+    border: 4px solid black;
+    font-family: Mistral;
+    font-size: 60px;
+    font-stretch: ultra-expanded;
+    color: #ADABAB;
+    text-align: center;
+    line-height: center;
+    z-index: 2;
+
+}
+
+.secondBox {
+    
+    height: 140px;
+    margin: 15px -5px 10px 5px;
+    background-color: white;
+    border: 1px solid #ECEBEB;
+    position: relative;
+}
+
+.thirdBox {
+    background-color: #161616;
+    height: 140px;
+    margin: 10px -5px 10px 5px;
+    padding-top: 5px;
+    /*position: relative;*/
+}
+
+.firstLineButton, .secondLineButton, .thirdLineButton {
+    margin-left: 30px;
+
+}
+
+.firstLineButton {
+    margin-top: 20px;
+}
+
+.secondLineButton, .thirdLineButton{
+    margin-top: 10px;
+
+}
+
+input {
+    border-radius: 6px;
+}
+
+.pink {
+    background-color: #D4429A;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
+    padding: 4px 10px;
+}
+
+.green {
+    background-color: #9EBD58;
+    color: white;
+    font-family: Lucida, Helvetica, serif monospace;
+    padding: 5px 10px;
+    font-size: 9px;
+    margin-left: -3px;
+    font-weight: bold;
+}
+
+.blue {
+    background-color: #44A5F0;
+    color: white;
+}
+
+.red {
+    background-color: #F04C23;
+    color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    margin-left: -3px;
+}
+
+.orange {
+    background-color: #E08345;
+    color: white;
+}
+
+.yellow {
+    background-color: #F5CB56;
+    color: white;
+}
+
+#blueWhiteBox {
+    font-size: 10px;
+    padding: 3px 8px;
+}
+
+#orangeWhiteBox {
+    font-size: 10px;
+    padding: 3px 8px;
+}
+
+#yellowWhiteBox {
+    font-size: 10px;
+    padding: 3px 8px;
+    margin-left: -2px;
+}
+
+#blueBlackBox {
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+#orangeBlackBox {
+    font-size: 7px;
+    padding: 3px 7px;
+    border-radius: 4px;
+}
+
+#yellowBlackBox {
+    font-size: 8px;
+    font-stretch: ultra-expanded;
+    padding: 3px 9px;
+    border-radius: 4px;
+    margin-left: -2px;
+}

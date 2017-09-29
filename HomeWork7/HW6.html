@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <form class="event-form" action="" method="Get" name="form">
+        <div class="event-form__size">
+
+            <div class="header">
+                <label class="header__label">Event name</label>
+                <div class="header__name">Mel's birthday celebration</div>
+            </div>
+
+            <br>
+
+            <div class="begin-event">
+                    <label class="begin-event__label">To</label>
+                    <table class="begin-event__table-top table-top">
+                        <tr class="table-top__row">
+                            <td class="table-top__cell-for-date">
+                                <input class="begin-event__date" type="date" min="2017-09-25" >
+                                <label class="begin-event__label-hidden" ><br>Date occures in the past</label>
+                            </td>
+                            <td class="table-top__cell-for-time">
+                                <input class="begin-event__time" type="time">
+                            </td>
+                        </tr>
+                    </table>                           
+            </div>
+            <br>
+
+            <div class="end-event">
+                    <label class="end-event__label">To</label>
+                    <table class="end-event__table-bottom table-bottom">
+                        <tr class="table-bottom__row">
+                            <td class="table-bottom__cell-for-date">
+                                <input class="end-event__date" type="date" min="2017-09-25" >
+                                <label class="end-event__label-hidden" ><br>Date occures in the past</label>
+                            </td>
+                            <td class="table-bottom__cell-for-time">
+                                <input class="end-event__time" type="time">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>                           
+            </div>
+        
+            <br>
+
+            <div class="footer">
+                    <label class="footer__label">Event name</label>
+                    <div class="footer__name">Mel's birthday celebration</div>
+            </div>
+
+            <div class="frame-and-button">
+                <iframe class="frame-and-button__change" src="iframe.html">
+                </iframe>
+            </div>
+
+    </div>
+</form>
+
+</body>
+</html>

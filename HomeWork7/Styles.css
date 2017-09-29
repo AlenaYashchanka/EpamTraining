@@ -1,0 +1,95 @@
+/* -------form size and styles-----------------*/
+
+.event-form {
+    display: flex;
+    justify-content: center;
+}
+
+.event-form__size {
+    height: 400px;
+    width: 300px;
+    border: 2px groove #CECCCC; 
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+/* -----font styles for texts------*/
+
+.header__label, .footer__label, .begin-event__label-hidden, .end-event__label-hidden, 
+.begin-event__label, .end-event__label
+{
+    font-size: 10px;
+    color: #A39D9D;
+    font-family: Arial;
+}
+
+.header__name, .footer__name {
+    font-size: 20px;
+}
+
+/*-----size and styles  for inputs----*/
+
+.begin-event__date, .end-event__date {
+    width: 140px;
+    border: none;
+    margin-left: -2px;
+}
+
+.begin-event__time, .end-event__time {
+    border: none;
+}
+
+/*------size and styles for table-----------*/
+
+.begin-event__table-top, .end-event__table-bottom {
+    width: 99%;
+}
+
+.table-top__cell-for-date, .table-bottom__cell-for-date {
+    width: 70%;
+}
+
+.table-bottom__cell-for-time, .table-top__cell-for-time {
+    vertical-align: top;
+}
+
+/*-------identification of label's visibility and styles for invalid items--------*/
+
+.begin-event__label-hidden, .end-event__label-hidden{                  
+    visibility: hidden;
+    color: red;
+}
+
+.begin-event__date:invalid + .begin-event__label-hidden {
+    visibility: visible;
+}
+
+.end-event__date:invalid + .end-event__label-hidden {
+    visibility: visible;
+}
+
+.begin-event__date:invalid, .begin-event__time:invalid, .end-event__date:invalid, .end-event__time:invalid {
+    border-bottom: 2px solid red;
+    
+}
+
+
+/*-------size and styles for frame---*/
+
+.frame-and-button__change{
+    width: 320px;
+    height: 100px;
+    border: none;
+}
+
+.exhaustive-frame__button, .changed-frame__button {
+    position: absolute;
+    margin-left: 170px;
+    margin-top: -10px
+}
+
+.exhaustive-frame__text, .changed-frame__text {
+    margin: 20px 0 0 -7px;
+    font-size: 20px;
+    color: green
+}

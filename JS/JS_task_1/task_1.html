@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    var a = "1" + 2 + 0;
+    document.write("Expression '1'+2+0 = "+ a +"-- all components are strings because of '+'<br><br>");
+    a="1"- 1 + 2;
+    document.write("Expression '1'-1+2 = "+ a +" -- all components are numbers because of '-'<br><br>");
+    a = true + false;
+    document.write("Expression true+false = "+ a +"-- true is 1, false is 0. 1+0=1 <br><br>");
+    a = 10 / "5";
+    document.write("Expression 10 / '5'= "+ a +" -- because '5' is number in this case<br><br>");
+    a = "2" * "3";
+    document.write("Expression '2' * '3'= "+ a +" -- because of *,  '2' and '3' are numbers in this case<br><br>");
+    a = 4 + 5 + "px";
+    document.write("Expression 4 + 5 + 'px'= "+ a +" -- first two components are numbers, they are summed, px is string and then they joined as strings<br><br>");
+    a = "$" + 4 + 5;
+    document.write("Expression '$' + 4 + 5 = "+ a +" -- first component is string, there is a connection<br><br>");
+    a = "42" - 2;
+    document.write("Expression '42' -2 = "+ a +" -- all components are numbers because of '-'<br><br>");
+
+    a = "4px" - 2;
+    document.write("Expression '4px' -2 = "+ a +" -- '-' means that components are numbers. 4px is not a number<br><br>");
+    a = 7 / 0;
+    document.write("Expression 7 / 0 = "+ a +" -- devision by zero<br><br>");
+    a = "  -9\n" + 5;
+    document.write("Expression '  -9\n' + 5 = "+ a +" -- the space at the beginning is ignored, \n is a space, + means all components are strings <br><br>");
+    a = "  -9\n" - 5;
+    document.write("Expression '  -9\n' - 5 = "+ a +" -- the space at the beginning and \n are ignored, - means all components are numbers<br><br>");
+    a = 5 && 2;
+    document.write("Expression 5 && 2 = "+ a +" -- && is logical AND, stumbles on first false. 2 and 5 are both true, that's why displays the last<br><br>");
+    a = 2 && 5;
+    document.write("Expression 2 && 5 = "+ a +" --  && is logical AND, stumbles on first false. 2 and 5 are both true, that's why displays the last<br><br>");
+    a = 5 || 0;
+    document.write("Expression 5 || 0 = "+ a +" -- || is logical OR, if one of the components - true, then expression = true. True is all that >0<br><br>");
+    a = 0 || 5;
+    document.write("Expression 0 || 5 = "+ a +" -- || is logical OR,if one of the components - true, then expression = true. True is all that>0<br><br>");
+    a = null + 1;
+    document.write("Expression null + 1 = "+ a +" -- null is zero in this case<br><br>");
+    a = undefined + 1;
+    document.write("Expression undefined + 1 = "+ a +" -- undefined is not a number<br><br>");
+    a = (null == "\n0\n");
+    document.write("Expression null == '\n0\n' = "+ a +" -- '==' transforms two components to the same type. type null is not string<br><br>");
+    a = (+null == +"\n0\n");
+    document.write("Expression +null == +'\n0\n' = "+ a +" --'+operand' means that component transforms to number. +null=0, +' 0 '=0<br><br>");
+    
+</script>
+
+</body>
+</html>

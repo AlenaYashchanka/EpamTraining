@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    //Factorial
+    var numberFact;
+    numberFact = prompt("Enter number to count factorial", "");
+    var factorial=1;
+    if (numberFact>0)
+    {
+        for (var i=1; i<=numberFact; i++)
+        {
+            factorial=factorial*i;
+        }
+    }
+    else
+    document.write("Enter correct number");
+    alert("Factorial of " + numberFact+ " = "+factorial);
+
+    //Fibonacci
+    var array = [0,1];
+    var amountOfNumbers = prompt("Enter amount of numbers to display Fibonacci", "");
+    var currentNumber = array[0] + array[1];
+    if (amountOfNumbers>0) {
+        for (var i=2; i<amountOfNumbers; i++)
+            {
+                array[i]=currentNumber;
+                currentNumber = currentNumber + array[i];
+            }
+        alert("Fibonacci numbers: " + array);
+    }
+    else alert("Enter correct number");
+    
+
+
+    //simple numbers
+    var arraySimple = [];
+    var flag = 0;
+    var k = 0;
+    var numberSimple = prompt("Enter amount of simple numbers", '');
+    
+        for (var i=1; true; i++)
+        {
+            for (var j=1; j<=i; j++)
+            {
+                if (i%j==0)
+                {
+                    flag+=1;
+                }
+            }
+            if (flag<=2 && numberSimple>0)
+            {
+                arraySimple[k]=i;
+                flag=0;
+                k++;
+                numberSimple--;
+            }
+            else if (flag>2 && numberSimple>0) 
+            {flag=0;}
+            else break;
+        }
+
+    alert("Simple numbers: " + arraySimple);
+
+</script>
+
+</body>
+</html>

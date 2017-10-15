@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    function mainFunc () {
+        var array = [];
+        
+        return function memoryFunc() {
+            if (arguments.length == 0) {
+                return array;
+            }
+            else {
+                for (var i = 0; i < arguments.length; i++)
+                {
+                array.push(arguments[i]);
+                }
+            }
+        }
+    }
+    
+var showArray = mainFunc();
+showArray(1,3);
+showArray(5,4);
+showArray({obj:1}, 'Hello World');
+console.log(showArray());
+</script>
+
+</body>
+</html>

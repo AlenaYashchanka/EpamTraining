@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+
+//   Functional inheritance
+
+    function classCar (model, year, developer) {
+        this.model = model;
+        this.year = year;
+        this.developer = developer;
+        this.identifyOldCar = function() {
+            if (this.year >= 2012) {
+                console.log('This car is quite new');
+            }
+            if (this.year < 2012 && this.year >= 2007) {
+                console.log('This car is not new and not old');
+            }
+            if (this.year < 2007 && this.year >= 2000) {
+                console.log('This car is quite old');
+            }
+            if (this.year < 2000) {
+                console.log('This car is old');
+            }
+        }
+    }
+
+    function classJeep (model, year, developer) {
+        classCar.call(this, model, year, developer);
+        this.identifyLoadCarryingCapacity  = function() {
+            console.log(`Load-carrying capacity of Jeep ${this.model} is more than 3 tons`);
+        }
+    }
+    
+    function classStationWagon (model, year, developer) {
+        classCar.call(this, model, year, developer);
+        this.identifyLoadCarryingCapacity  = function() {
+            console.log(`Load-carrying capacity of Station wagon ${this.model} is more than 2 and less than 3 tons`);
+        }
+    }
+
+    function classSedan (model, year, developer) {
+        classCar.call(this, model, year, developer);
+        this.identifyLoadCarryingCapacity  = function() {
+            console.log(`Load-carrying capacity of Sedan ${this.model} is about 1,8-2,5 tons`);
+        }
+    }
+
+var carPeugeot = new classSedan('407', '2004', 'Peugeot');
+carPeugeot.identifyLoadCarryingCapacity();
+carPeugeot.identifyOldCar();
+
+var carGrandCherokee = new classJeep('Grand Cherokee', '2009', 'Jeep');
+carGrandCherokee.identifyLoadCarryingCapacity();
+carGrandCherokee.identifyOldCar();
+
+var carVW = new classStationWagon('Passat', '2014', 'VolksWagen');
+carVW.identifyLoadCarryingCapacity();
+carVW.identifyOldCar();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+
+//   Prototype inheritance
+
+    function classCar (model, year, developer) {
+        this.model = model;
+        this.year = year;
+        this.developer = developer;
+    }
+
+    classCar.prototype.identifyAgeCar = function() {
+        var today = new Date();
+        var currentYear = today.getFullYear();
+        var age = currentYear-this.year;
+            console.log('This car is ' + age + ' year(s) old');
+        }
+
+    classCar.prototype.identifyManufacturerCountry = function() {
+        switch(this.developer){
+            case 'Peugeot': console.log("Manufacturer country is France"); break;
+            case 'VolksWagen': console.log("Manufacturer country is Germany");break;
+            case 'Reno': console.log("Manufacturer country is France"); break;
+            case 'Mersedes': console.log("Manufacturer country is Germany");break;
+            case 'Volvo': console.log("Manufacturer country is Sweden"); break;
+            case 'Ford': console.log("Manufacturer country is USA"); break;
+            case 'Honda': console.log("Manufacturer country is Japan"); break;
+            case 'Skoda': console.log("Manufacturer country is Czech Republic"); break;
+            case 'Hyundai': console.log("Manufacturer country is South Korea"); break;
+            default: console.log("This developer is missed in database");
+        }
+    }
+
+    function classJeep (model, year, developer) {
+        classCar.prototype.constructor(model, year, developer);
+        this.identifyLoadCarryingCapacity  = function() {
+            console.log(`Load-carrying capacity of Jeep ${this.model} is more than 3 tons`);
+        }
+    }
+    
+    function classStationWagon (model, year, developer) {
+        classCar.prototype.constructor(model, year, developer);
+        this.identifyLoadCarryingCapacity  = function() {
+            console.log(`Load-carrying capacity of Station wagon ${this.model} is more than 2 and less than 3 tons`);
+        }
+    }
+
+    function classSedan (model, year, developer) {
+        classCar.prototype.constructor(model, year, developer);
+        this.identifyLoadCarryingCapacity  = function() {
+            console.log(`Load-carrying capacity of Sedan ${this.model} is about 1,8-2,5 tons`);
+        }
+    }
+
+    classJeep.prototype = classCar.prototype; 
+    classSedan.prototype = classCar.prototype;
+    classStationWagon.prototype = classCar.prototype;   
+
+var carPeugeot = new classSedan('407', '2004', 'Peugeot');
+carPeugeot.identifyLoadCarryingCapacity();
+carPeugeot.identifyAgeCar();
+carPeugeot.identifyManufacturerCountry();
+
+var carGrandCherokee = new classJeep('Grand Cherokee', '2009', 'Jeep');
+carGrandCherokee.identifyLoadCarryingCapacity();
+carGrandCherokee.identifyAgeCar();
+carGrandCherokee.identifyManufacturerCountry();
+
+var carVW = new classStationWagon('Passat', '2015', 'VolksWagen');
+carVW.identifyLoadCarryingCapacity();
+carVW.identifyAgeCar();
+carVW.identifyManufacturerCountry();
+</script>
+
+</body>
+</html>

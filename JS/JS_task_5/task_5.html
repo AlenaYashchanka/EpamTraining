@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Document</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <script src="js_file.js"></script>
+</head>
+
+<body>
+    <div class="mainForm">
+    <div><label>Event name</label></div>
+    <div>Mel's birthday celebration</div>
+    <br>
+    <table>
+        <tr><td colspan="2"><label>From</label></td></tr>
+        <tr><td class="line"><input type="text" placeholder="YYYY-MM-DD" class="dateFrom" id="dateFrom" name="dateFrom"><label class="labelHidden" >Date occures in the past</label></td><td class="line"><input type="time" name="timeFrom"></td></tr>
+        <tr><td colspan="2"></td></tr>
+        <tr><td colspan="2"><label>To</label></td></tr>
+        <tr><td class="line"><input type="text" placeholder="YYYY-MM-DD" class="dateTo" id="dateTo" name="dateTo"><label class="labelHidden" >Date occures in the past</label></td><td class="line"><input type="time" name="timeTo"></tr>
+        <tr><td colspan="2"></td></tr>
+    </table>
+    <div>Are you coming on party?</div>
+    <label>YES<input type="radio" class="radioButton" name="radio"></label>
+    <label>DEFINETELY YES<input type="radio" class="radioButton" name="radio"></label>
+    <div>How many bottles of beer will you bring?</div>
+    <div><select id="selector">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+    </div>
+    <div><label>Description</label></div>
+    <div>Come help celebrate Mel's birthday with dinner, drink and putt-putt</div>
+    <input type="button" value="save" class="button" id="button">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* Styles reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for title Month-Year*/
+.datepicker-month-year {
+    display: flex;
+}
+
+.datepicker-month-year__prev-month {
+    margin: 5px 5px 2px 30px;
+    align-content: center;
+}
+
+.datepicker-month-year__prev-month:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+
+.datepicker-month-year__title {
+    margin: 2px 5px;
+    font-size: 20px;
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+}
+.datepicker-month-year__next-month {
+    margin: 5px 2px 2px 5px;
+    align-content: center;
+}
+
+.datepicker-month-year__next-month:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+/* Styles for title weekdays*/
+
+.datepicker-container__weekdays {
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
+
+.datepicker-weekdays__weekday {
+    height: 20px;
+    width: 30px;
+    margin: 5px 4.5px;
+    font-size: 18px;
+    font-weight: 10px;
+}
+
+/* Styles for days in month*/
+.datepicker-container__days-in-month {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    text-align: center;
+}
+
+.datepicker-days-in-month__day, .datepicker-days-in-month__day--empty {
+    margin: 3px 3px;
+    padding: 3px;
+    height: 20px;
+    width: 25px;
+    border: 1px solid #312121;
+    border: 1px solid #C7C5C5;
+}

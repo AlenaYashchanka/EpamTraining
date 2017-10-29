@@ -9,6 +9,7 @@ var currentDate = d.getDate();
 var year = currentYear;
 var month = currentMonth;
 
+
 // Create container for datepicker
 var datepicker = document.createElement('div');
 datepicker.setAttribute('class', 'datepicker-container');

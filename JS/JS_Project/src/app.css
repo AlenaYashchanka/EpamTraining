@@ -1,0 +1,54 @@
+* {
+    font-family: Segoe print;
+    color: grey;
+    
+}
+
+.fashion {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.fashion-menu{
+ width: 20%;
+ height: 100%;
+ font-size: 15px;
+ padding-top: 20px;
+}
+
+.menu-item__label:hover {
+    cursor: pointer;
+    background-color: rgb(148, 148, 240);
+    border-radius: 10px;
+}
+
+.main-page{
+    max-width: 80%;
+}
+
+.head-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.fashion__basket-wrapper{
+    display: flex;
+}
+
+.fashion-counter{
+    padding: 20px;
+}
+
+.fashion__catalog {
+    display: flex;
+}
+
+.catalog-item{
+    margin: 40px;
+}
+
+.menu-item__image{
+    background: url('./images/bag.jpg');
+}
+

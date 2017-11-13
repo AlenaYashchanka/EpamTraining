@@ -9,22 +9,55 @@
     flex-direction: row;
     width: 100%;
 }
-
-.fashion-menu{
- width: 20%;
- height: 100%;
- font-size: 15px;
- padding-top: 20px;
+.menu-item{
+    display: flex;
 }
 
-.menu-item__label:hover {
+.menu-item__label{
+    display: block;
+}
+
+.menu-item__label-hidden {
+    display: none;
+    width: 0px;
+}
+.fashion-menu{
+    position: fixed;
+    height: 100%;
+    font-size: 15px;
+    padding-top: 20px;
+}
+.menu-item__image--logo{
+    background: url('./images/bag.jpg') no-repeat;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-item__image--public-catalog{
+    background: url('./images/folder1.jpg') no-repeat;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-item:hover {
     cursor: pointer;
     background-color: rgb(148, 148, 240);
     border-radius: 10px;
 }
+.menu-item__label:hover{
+    color: white;
+}
 
+.menu-item__label{
+    width: 100%;
+}
 .main-page{
     max-width: 80%;
+    margin-left: 300px;
 }
 
 .head-items {
@@ -46,9 +79,5 @@
 
 .catalog-item{
     margin: 40px;
-}
-
-.menu-item__image{
-    background: url('./images/bag.jpg');
 }
 

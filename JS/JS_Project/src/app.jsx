@@ -2,14 +2,22 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Items from './catalogItems.json';
+import Items from './response-data-export.json';
 
 //import compponents
-import {Input} from './components/input.jsx';
-import {Dropdown} from './components/dropdown.jsx';
-import {Menu} from './components/menu.jsx';
-import {Basket} from './components/basket.jsx';
-import {Catalog} from './components/catalog.jsx';
+import {Input} from './components/input/input.jsx';
+import {Dropdown} from './components/dropdown/dropdown.jsx';
+import {Menu} from './components/menu/menu.jsx';
+import {Button} from './components/button-advanced/button.jsx';
+import {Basket} from './components/basket/basket.jsx';
+import {Catalog} from './components/catalog/catalog.jsx';
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink,
+    Switch,
+    Link
+  } from 'react-router-dom'
 
 
 //import css-styles
@@ -20,7 +28,7 @@ import './app.css';
 class App extends Component {
     constructor(props){
         super(props);
-        this.state = {displayedItems: Items.catalogItems};
+        this.state = {displayedItems: Items.response.results};
         this.updateItems = this.updateItems.bind(this);
     }
 
@@ -30,19 +38,28 @@ class App extends Component {
 
     render(){
         return(
+            <Router>
             <div className = "fashion">
                 <div className = "fashion-menu"> <Menu/>
                 </div>
                 <div className = "main-page"> 
-                    <div className = "head-items"><Input displayResult = {this.updateItems}/> <Dropdown/>
+                    <div className = "head-items"><Input displayResult = {this.updateItems}/> <Button/> <Dropdown/>
                     </div>  
                     <div className = "basket"><Basket/></div> 
-                    <h3>Shop styles</h3>
-                    <Catalog myCatalog = {this.state.displayedItems}/>
+                    <h3>Shop styles</h3>                  
+                    <Switch>
+                        <Route exact path= "/public-catalog" render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>
+                        <Route path={`/private-catalog`} render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>
+                        <Route path={`/heading3`} render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>
+                        <Route path={`/heading-3`} render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>
+                    </Switch>
                 </div>
             </div>
+            </Router>
         );
     }
 }
 
 ReactDOM.render(<App/>, document.getElementById('container'));
+
+//<Catalog myCatalog = {this.state.displayedItems}/>

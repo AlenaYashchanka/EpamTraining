@@ -1,0 +1,1 @@
+export const CLICK_LOGO = '[MY_PROJ][FASHION] CLICK_LOGO';

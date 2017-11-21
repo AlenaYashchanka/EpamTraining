@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import $ from "jquery";
-
-//import {Bag} from '../images/bag.jpg';
-//import {Folder1} from '../images/folder1.jpg';
-//import {Folder2} from '../images/folder2.jpg';
-//import {Picture1} from '../images/picture1.png';
-//import {Picture2} from '../images/picture2.png';
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink,
+    Link
+  } from 'react-router-dom'
 
 export class Menu extends React.Component {
     
@@ -26,24 +26,24 @@ export class Menu extends React.Component {
             <div className = "fashion-menu-wrapper">
                 <div className="menu-item" >
                     <div className ="menu-item__image menu-item__image--logo" onClick = {this.onHandleClick}></div>
-                    <a className={this.state.class}>Logo</a>
+                    <div className={this.state.class}>Logo</div>
                 </div>
-                <div className="menu-item">
+                < NavLink exact to="/public-catalog" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--public-catalog"></div>
-                    <a className={this.state.class}>Public Catalog</a>
-                </div>
-                <div className="menu-item">
+                    <div className={this.state.class}>Public Catalog</div>
+                </NavLink>
+                < NavLink to="/private-catalog" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--private-catalog"></div>
-                    <a className={this.state.class}>Private Catalog</a>
-                </div>
-                <div className="menu-item">
+                    <div className={this.state.class}>Private Catalog</div>
+                </NavLink>
+                < NavLink to="/heading3" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--heading"></div>
-                    <a className={this.state.class}>Heading 3</a>
-                </div>
-                <div className="menu-item">
+                    <div className={this.state.class}>Heading 3</div>
+                </NavLink>
+                < NavLink to="/heading-3" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image"></div>
-                    <a className={this.state.class}>Heading 3</a>
-                </div>
+                    <div className={this.state.class}>Heading 3</div>
+                </NavLink>
             </div>
         );
     }

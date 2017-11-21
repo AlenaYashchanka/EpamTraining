@@ -1,24 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Items from '../catalogItems.json';
-
-//const catalogItems = Items.catalogItems;
+import Items from './../../response-data-export.json';
 
 export class Input extends React.Component {
     
     constructor(props) {
         super(props);
-        console.log('constructor');
         this.onInputChange = this.onInputChange.bind(this);
-       /* this.state = { 
-            textValue: this.props.textValue,
-            //displayedItems: catalogItems
-        };*/
     }
         onInputChange(event) {
             let searchQuery = event.target.value.toLowerCase();
-            let displayedItems = Items.catalogItems.filter(function(e){
-                let searchValue = e.text.toLowerCase();
+            let displayedItems = Items.response.results.filter(function(e){
+                let searchValue = e.object.metadata.title.toLowerCase();
                 return searchValue.indexOf(searchQuery) !== -1;
        });
             this.props.displayResult(displayedItems);
@@ -30,9 +23,7 @@ export class Input extends React.Component {
                     type = "text" 
                     placeholder = "search input" 
                     onChange = {this.onInputChange}
-                    //value={this.state.textValue}
-                    >
-            </input>
+            />
         );
     }
     

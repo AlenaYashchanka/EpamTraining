@@ -25,23 +25,23 @@ export class Menu extends React.Component {
             <div className = "fashion-menu-wrapper">
                 <div className="menu-item" >
                     <div className ="menu-item__image menu-item__image--logo" onClick = {this.props.menuCollapsed}></div>
-                    <div className={['menu-item__label', !props.openMenu && 'menu-item__label-hidden'].join(' ')}>Logo</div>
+                    <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Logo</div>
                 </div>
                 < NavLink exact to="/" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--public-catalog"></div>
-                    <div className={['menu-item__label', !props.openMenu && 'menu-item__label-hidden'].join(' ')}>Public Catalog</div>
+                    <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Public Catalog</div>
                 </NavLink>
                 < NavLink to="/private-catalog" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--private-catalog"></div>
-                    <div className={['menu-item__label', !props.openMenu && 'menu-item__label-hidden'].join(' ')}>Private Catalog</div>
+                    <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Private Catalog</div>
                 </NavLink>
                 < NavLink to="/heading3" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--heading"></div>
-                    <div className={['menu-item__label', !props.openMenu && 'menu-item__label-hidden'].join(' ')}>Heading 3</div>
+                    <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Heading 3</div>
                 </NavLink>
                 < NavLink to="/heading-3" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image"></div>
-                    <div className={['menu-item__label', !props.openMenu && 'menu-item__label-hidden'].join(' ')}>Heading 3</div>
+                    <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Heading 3</div>
                 </NavLink>
             </div>
         );

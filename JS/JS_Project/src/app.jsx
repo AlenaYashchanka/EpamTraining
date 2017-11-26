@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Items from './response-data-export.json';
 
-import { appStore } from './store/index.jsx';
-import Provider from 'react-redux';
+import { appStore } from './store/';
+import { Provider } from 'react-redux';
 
 //import compponents
 //import {Input} from './components/input/input.jsx';

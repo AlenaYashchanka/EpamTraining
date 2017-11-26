@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import { appReducers } from './reducers/index.jsx';
-import { logger } from './middleware/index.jsx';
+import { appReducers } from './reducers/';
+import { logger } from './middleware/';
 
-const appStore = createStore(
+export const appStore = createStore(
     appReducers,
     composeWithDevTools(
         applyMiddleware(store => next => action =>
@@ -15,4 +15,4 @@ const appStore = createStore(
     )
 )
 
-export default appStore;
+//export const appStore

@@ -1,4 +1,4 @@
-import { CHANGE_SIDEBAR_STATE } from './menu.types.jsx';
+import { CHANGE_SIDEBAR_STATE }  from './menu.types.js';
 
 export function menuCollapsed(payload) {
     return {

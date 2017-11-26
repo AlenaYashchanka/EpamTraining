@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import menuCollapsed from './../../store/actions/index.jsx'
+import { menuCollapsed } from './../../store/actions/'
 import Items from './../../response-data-export.json';
-//import Items from './../../services/request-service.jsx';
-import appStore from './../../store/index.jsx'
+import { appStore } from './../../store/'
 
 //import compponents
 import {Input} from './../input/input.jsx';
@@ -34,17 +33,17 @@ class App extends Component {
         super(props);
         this.state = {displayedItems: Items.response.results};
         this.updateItems = this.updateItems.bind(this);
-        this.state = {displayCountItems: displayedItems.length};
-        this.updateCountItems = this.updateCountItems.bind(this);
+        //this.state = {displayCountItems: this.state.displayedItems.length};
+        //this.updateCountItems = this.updateCountItems.bind(this);
     }
 
     updateItems(a){
         this.setState({displayedItems: a});
     }
 
-    updateCountItems(){
-        this.setState({displayCountItems: displayedItems.length});
-    }
+    //updateCountItems(){
+    //    this.setState({displayCountItems: this.state.displayedItems.length});
+    //}
 
     render(){
         return(
@@ -56,7 +55,7 @@ class App extends Component {
                 <div className = "main-page"> 
                     <div className = "head-items"><Input displayResult = {this.updateItems}/> <Button/> <Dropdown/>
                     </div>  
-                    <div className = "basket"><Basket countItems={this.updateCountItems}/></div> 
+                    <div className = "basket"><Basket/></div> 
                     <h3>Shop styles</h3>                  
                     <Switch>
                         <Route exact path= "/" render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>

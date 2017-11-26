@@ -1,4 +1,4 @@
-import { CHANGE_SIDEBAR_STATE } from './../actions/index.jsx';
+import { CHANGE_SIDEBAR_STATE } from './../actions/';
 
 const initialState = {
     state: 'INITIAL',

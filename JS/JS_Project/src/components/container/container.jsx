@@ -33,17 +33,11 @@ class App extends Component {
         super(props);
         this.state = {displayedItems: Items.response.results};
         this.updateItems = this.updateItems.bind(this);
-        //this.state = {displayCountItems: this.state.displayedItems.length};
-        //this.updateCountItems = this.updateCountItems.bind(this);
     }
 
     updateItems(a){
         this.setState({displayedItems: a});
     }
-
-    //updateCountItems(){
-    //    this.setState({displayCountItems: this.state.displayedItems.length});
-    //}
 
     render(){
         return(
@@ -55,7 +49,7 @@ class App extends Component {
                 <div className = "main-page"> 
                     <div className = "head-items"><Input displayResult = {this.updateItems}/> <Button/> <Dropdown/>
                     </div>  
-                    <div className = "basket"><Basket/></div> 
+                    <div className = "basket"><Basket countItems = {this.state.displayedItems.length}/></div> 
                     <h3>Shop styles</h3>                  
                     <Switch>
                         <Route exact path= "/" render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>

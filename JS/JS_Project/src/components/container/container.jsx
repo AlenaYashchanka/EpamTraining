@@ -2,18 +2,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Items from './response-data-export.json';
-import { Root } from './components/container/container.jsx';
-import { appStore } from './store/index.jsx';
-import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
+import {menuCollapsed} from './../../store/actions/index.jsx'
+import Items from './../../response-data-export.json';
+import { appStore } from './../../store/index.jsx'
 
 //import compponents
-import {Input} from './components/input/input.jsx';
-import {Dropdown} from './components/dropdown/dropdown.jsx';
-import {Menu} from './components/menu/menu.jsx';
-import {Button} from './components/button-advanced/button.jsx';
-import {Basket} from './components/basket/basket.jsx';
-import {Catalog} from './components/catalog/catalog.jsx';
+import {Input} from './../input/input.jsx';
+import {Dropdown} from './../dropdown/dropdown.jsx';
+import {Menu} from './../menu/menu.jsx';
+import {Button} from './../button-advanced/button.jsx';
+import {Basket} from './../basket/basket.jsx';
+import {Catalog} from './../catalog/catalog.jsx';
 import {
     BrowserRouter as Router,
     Route,
@@ -24,17 +24,10 @@ import {
 
 
 //import css-styles
-import './app.css';
-
-ReactDOM.render(
-    <Provider store={appStore}>
-        <Root />
-    </Provider>, document.getElementById('container')
-);
-
+import './../../app.css';
 
 // create DOM
-/*
+
 class App extends Component {
     constructor(props){
         super(props);
@@ -50,7 +43,8 @@ class App extends Component {
         return(
             <Router>
             <div className = "fashion">
-                <div className = "fashion-menu"> <Menu/>
+                <div className = {["fashion-menu", "fashion-menu__width", this.props.isOpenedMenu && 'fashion-menu__width--big-width'].join(' ')}>
+                     <Menu menuCollapsed={this.props.menuCollapsed} openMenu={this.props.isOpenedMenu}/>
                 </div>
                 <div className = "main-page"> 
                     <div className = "head-items"><Input displayResult = {this.updateItems}/> <Button/> <Dropdown/>
@@ -70,5 +64,17 @@ class App extends Component {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('container'));
-*/
+//ReactDOM.render(<App/>, document.getElementById('container'));
+
+const mapStateToProps = (state) => {
+    const isOpenedMenu = state.menu.isOpened;
+    return {
+        isOpenedMenu
+    };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    menuCollapsed: () => dispatch(menuCollapsed()),
+});
+
+export const Root = connect(mapStateToProps, mapDispatchToProps)(App);

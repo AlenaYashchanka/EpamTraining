@@ -1,4 +1,4 @@
-import { CLICK_LOGO } from './../actions/index';
+import { CHANGE_SIDEBAR_STATE } from './../actions/index.jsx';
 
 const initialState = {
     state: 'INITIAL',
@@ -7,9 +7,10 @@ const initialState = {
 
 export function menuReducer(state = initialState, action) {
     switch (action.type) {
-        case CLICK_LOGO:
+        case CHANGE_SIDEBAR_STATE:
             return {
-                isOpened: !state.isOpened,
+                state,
+                isOpened: !state.isOpened
             };
         default:
             return state;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Items from './../../response-data-export.json';
 
+
 export class Input extends React.Component {
     
     constructor(props) {
@@ -29,3 +30,17 @@ export class Input extends React.Component {
     
     
 }
+
+/*
+const mapStateToProps = (state) => {
+  const values = state.search.inputValue;
+
+  return { values };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    startSearch: (search) => dispatch(startSearch(search))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
+*/

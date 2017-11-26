@@ -1,20 +1,16 @@
-class GetCatalog {
-    requestData(url) {
-      return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.onload = function() {
-          if (this.status === 200) {
-              resolve(xhr.responseText);
-          } else {
-              var error = new Error(this.statusText);
-              error.code = this.status;
-              reject(error);
-          }
-        };
-        xhr.send();
-        });
-    }
-  }
-  
-  export default GetCatalog;
+  //    axios.get('http://docs.threadgenius.co/#public-catalogs?key_NTNiOTMzZDViNzRhZmNmZjQxNTdkOWM1YjQxOGJj')
+
+  function GetItems(){
+    axios.get('./../response-data-export.json')
+    .then(function (response) {
+      console.log(response);
+      //Items = response.response.results
+      Items = response
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+export  default Items = GetItems();
+

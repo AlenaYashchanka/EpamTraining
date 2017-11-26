@@ -3,17 +3,20 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Items from './response-data-export.json';
-import { Root } from './components/container/container.jsx';
+
 import { appStore } from './store/index.jsx';
-import { Provider } from 'react-redux';
+import Provider from 'react-redux';
 
 //import compponents
-import {Input} from './components/input/input.jsx';
-import {Dropdown} from './components/dropdown/dropdown.jsx';
-import {Menu} from './components/menu/menu.jsx';
-import {Button} from './components/button-advanced/button.jsx';
-import {Basket} from './components/basket/basket.jsx';
-import {Catalog} from './components/catalog/catalog.jsx';
+//import {Input} from './components/input/input.jsx';
+//import {Dropdown} from './components/dropdown/dropdown.jsx';
+//import {Menu} from './components/menu/menu.jsx';
+//import {Button} from './components/button-advanced/button.jsx';
+//import {Basket} from './components/basket/basket.jsx';
+//import {Catalog} from './components/catalog/catalog.jsx';
+//import Root from './components/container/container.jsx';
+import App from './components/container/container.jsx';
+
 import {
     BrowserRouter as Router,
     Route,
@@ -27,8 +30,8 @@ import {
 import './app.css';
 
 ReactDOM.render(
-    <Provider store={appStore}>
-        <Root />
+    <Provider store = {appStore}>
+        <App />
     </Provider>, document.getElementById('container')
 );
 

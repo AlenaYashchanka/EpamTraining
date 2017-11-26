@@ -23,25 +23,13 @@ export class Catalog extends React.Component {
     constructor(props){
       super(props);
     }
-/*
-    ComponentDidMount(){
-        axios.get('http://docs.threadgenius.co/#public-catalogs?key_NTNiOTMzZDViNzRhZmNmZjQxNTdkOWM1YjQxOGJj')
-        .then(function (response) {
-          console.log(response);
-          this.setState = {Items: [...response.response.results]}
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-      
-    }*/
+
     render() {
         const catalogItems = this.props.myCatalog;
         return (
                 <div className = "fashion__catalog catalog-wrapper">
                     {
-                    //this.state.Items.map((el,i)=><Item key = {i} title = {el.object.metadata.title} price = {el.object.metadata.price} image = {el.object.image.url}/>);
-                    catalogItems.map(function(el, i) {return <Item key = {i} title = {el.object.metadata.title} price = {el.object.metadata.price} image = {el.object.image.url}/>})
+                    catalogItems.map(function(el, index) {return <Item key = {index} title = {el.object.metadata.title} price = {el.object.metadata.price} image = {el.object.image.url}/>})
                     }
                 </div>
         );

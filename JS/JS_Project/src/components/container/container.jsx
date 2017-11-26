@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {menuCollapsed} from './../../store/actions/index.jsx'
+import menuCollapsed from './../../store/actions/index.jsx'
 import Items from './../../response-data-export.json';
-import { appStore } from './../../store/index.jsx'
+//import Items from './../../services/request-service.jsx';
+import appStore from './../../store/index.jsx'
 
 //import compponents
 import {Input} from './../input/input.jsx';
@@ -33,10 +34,16 @@ class App extends Component {
         super(props);
         this.state = {displayedItems: Items.response.results};
         this.updateItems = this.updateItems.bind(this);
+        this.state = {displayCountItems: displayedItems.length};
+        this.updateCountItems = this.updateCountItems.bind(this);
     }
 
     updateItems(a){
         this.setState({displayedItems: a});
+    }
+
+    updateCountItems(){
+        this.setState({displayCountItems: displayedItems.length});
     }
 
     render(){
@@ -49,7 +56,7 @@ class App extends Component {
                 <div className = "main-page"> 
                     <div className = "head-items"><Input displayResult = {this.updateItems}/> <Button/> <Dropdown/>
                     </div>  
-                    <div className = "basket"><Basket/></div> 
+                    <div className = "basket"><Basket countItems={this.updateCountItems}/></div> 
                     <h3>Shop styles</h3>                  
                     <Switch>
                         <Route exact path= "/" render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>
@@ -77,4 +84,5 @@ const mapDispatchToProps = (dispatch) => ({
     menuCollapsed: () => dispatch(menuCollapsed()),
 });
 
-export const Root = connect(mapStateToProps, mapDispatchToProps)(App);
+//export const Root = connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

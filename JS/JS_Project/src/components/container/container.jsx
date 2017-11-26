@@ -39,7 +39,15 @@ class App extends Component {
         this.setState({displayedItems: a});
     }
 
+    updatePrice(){
+        let sumPrice=0;
+        this.state.displayedItems.forEach((el)=>{sumPrice+=el.object.metadata.price;});
+        return sumPrice;
+    }
+
     render(){
+        //let sumPrice=0;
+        //this.state.displayedItems.forEach((el)=>{sumPrice+=el.object.metadata.price;});
         return(
             <Router>
             <div className = "fashion">
@@ -49,7 +57,14 @@ class App extends Component {
                 <div className = "main-page"> 
                     <div className = "head-items"><Input displayResult = {this.updateItems}/> <Button/> <Dropdown/>
                     </div>  
-                    <div className = "basket"><Basket countItems = {this.state.displayedItems.length}/></div> 
+                    <div className = "basket">
+                        <Basket 
+                        countItems = {this.state.displayedItems.length}
+                        //countPrice = {this.state.displayedItems.length}
+                        //countPrice = {this.state.displayedItems.reduce((sum, current)=>{return sum.object.metadata.price+current.object.metadata.price;})} 
+                        countPrice = {this.updatePrice()} 
+                        />
+                    </div> 
                     <h3>Shop styles</h3>                  
                     <Switch>
                         <Route exact path= "/" render={(props)=><Catalog myCatalog = {this.state.displayedItems} {...props}/>}/>

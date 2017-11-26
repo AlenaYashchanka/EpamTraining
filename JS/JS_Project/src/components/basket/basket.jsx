@@ -13,8 +13,8 @@ export class Basket extends React.Component {
                     <div className = "fashion-counter__text">Items Found</div>
                 </div>
                 <div className = "fashion-counter">
-                    <div className = "fashion-counter__number">$150</div>
-                    <div className = "fashion-counter__text">Some text</div>
+                    <div className = "fashion-counter__number">{this.props.countPrice}</div>
+                    <div className = "fashion-counter__text">Average cost</div>
                 </div>
             </div>
         );

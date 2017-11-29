@@ -9,7 +9,7 @@ export class Basket extends React.Component {
         return (
             <div className = "fashion__basket-wrapper">
                 <div className = "fashion-counter">
-                    <div className = "fashion-counter__number">{this.props.countItems}</div>
+                    <div className = "fashion-counter__number">{this.props.countItemsValue}</div>
                     <div className = "fashion-counter__text">Items Found</div>
                 </div>
                 <div className = "fashion-counter">

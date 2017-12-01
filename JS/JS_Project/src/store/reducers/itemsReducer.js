@@ -1,17 +1,10 @@
 import { START_SIMPLE_SEARCH } from './../actions/'
 import data from '../../response-data-export.json'
 
-let sumPrice = 0
-data.response.results.forEach(el => {
-  sumPrice += el.object.metadata.price
-})
-
 const initialState = {
   state: 'INITIAL',
   data: data.response.results,
-  allItems: data.response.results,
-  countItems: data.response.results.length,
-  countPrice: sumPrice
+  allItems: data.response.results
 }
 
 export function itemsReducer (state = initialState, action) {
@@ -28,18 +21,12 @@ export function itemsReducer (state = initialState, action) {
               .toLowerCase()
               .indexOf(action.payload.toLowerCase()) !== -1
           )
-        })
-
-        sumPrice = 0
-        state.data.forEach(el => {
-          sumPrice += el.object.metadata.price
-        })
+        }) 
       }
       return { 
+        state,
         data: newValue, 
-        allItems: state.allItems, 
-        countItems: state.data.length,
-        countPrice: sumPrice
+        allItems: state.allItems
       }
      default:
       return state

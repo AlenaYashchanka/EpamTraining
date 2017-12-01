@@ -31,22 +31,6 @@ import '../app.css'
 class ViewPublicCatalog extends Component {
   constructor (props) {
     super(props)
-    this.state = { displayedItems: Items.response.results }
-    this.updateItems = this.updateItems.bind(this)
-  }
-
-
-
-  updateItems (a) {
-    this.setState({ displayedItems: a })
-  }
-
-  updatePrice () {
-    let sumPrice = 0
-    this.state.displayedItems.forEach(el => {
-      sumPrice += el.object.metadata.price
-    })
-    return sumPrice
   }
 
   render () {
@@ -73,8 +57,12 @@ class ViewPublicCatalog extends Component {
 }
 const mapStateToProps = state => {
     const items = state.items.data;
-    const countItems = state.items.countItems;
-    const countPrice = state.items.countPrice;
+    const countItems = state.items.data.length;
+    let sumPrice = 0;
+    state.items.data.forEach(el => {
+      sumPrice += el.object.metadata.price
+    });
+    let countPrice = sumPrice;
     console.log('===============================');
     console.log(countItems);
     console.log('===============================');
@@ -82,6 +70,7 @@ const mapStateToProps = state => {
     console.log(countPrice);
     console.log('===============================');
     console.log(items);
+    console.log('===============================');
 
     return {
       items,

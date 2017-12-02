@@ -6,13 +6,14 @@ import { menuCollapsed } from './../store/actions/'
 import Items from './../response-data-export.json'
 import { appStore } from './../store/'
 import { simpleSearch } from '../store/actions/'
+import { searchPrice } from '../store/actions/'
 
 
 // import compponents
 import { Input } from './../components/input/input.jsx'
 import { Dropdown } from './../components/dropdown/dropdown.jsx'
 import { Menu } from './../components/menu/menu.jsx'
-import { Button } from './../components/button-advanced/button.jsx'
+import Button from './../components/button-advanced/button.jsx'
 import { Basket } from './../components/basket/basket.jsx'
 import { Catalog } from './../components/catalog/catalog.jsx'
 import {
@@ -80,7 +81,8 @@ const mapStateToProps = state => {
   }
 
   const mapDispatchToProps = dispatch => ({
-    simpleSearch: search => dispatch(simpleSearch(search))
+    simpleSearch: search => dispatch(simpleSearch(search)),
+    searchPrice: pricesearch => dispatch(searchPrice(pricesearch))
   })
 
 //export const Root = connect(mapStateToProps, mapDispatchToProps)(App);

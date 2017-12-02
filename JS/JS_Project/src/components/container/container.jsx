@@ -71,13 +71,13 @@ class App extends Component {
               )}
             />
             <Route
-              path={`/heading3`}
+              path={`/favourites`}
               render={props => (
                 <Catalog myCatalog={this.state.displayedItems} {...props} />
               )}
             />
             <Route
-              path={`/heading-3`}
+              path={`/about`}
               render={props => (
                 <Catalog myCatalog={this.state.displayedItems} {...props} />
               )}

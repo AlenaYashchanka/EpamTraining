@@ -35,11 +35,11 @@ export class Menu extends React.Component {
                     <div className ="menu-item__image menu-item__image--private-catalog"></div>
                     <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Private Catalog</div>
                 </NavLink>
-                < NavLink to="/heading3" activeClassName="menu-item--active" className="menu-item">
+                < NavLink to="/favourites" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image--heading"></div>
                     <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Favourites</div>
                 </NavLink>
-                < NavLink to="/heading-3" activeClassName="menu-item--active" className="menu-item">
+                < NavLink to="/about" activeClassName="menu-item--active" className="menu-item">
                     <div className ="menu-item__image menu-item__image"></div>
                     <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>About</div>
                 </NavLink>

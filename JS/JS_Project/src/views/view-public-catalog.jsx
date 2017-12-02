@@ -36,7 +36,7 @@ class ViewPublicCatalog extends Component {
 
   render () {
     return (
-      <div className='main-page'>
+      <div className='main-page main-page--public'>
         <div className='head-items'>
           <Input
             simpleSearch={this.props.simpleSearch}
@@ -56,6 +56,7 @@ class ViewPublicCatalog extends Component {
     )
   }
 }
+
 const mapStateToProps = state => {
     const items = state.items.data;
     const countItems = state.items.data.length;

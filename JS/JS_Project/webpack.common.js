@@ -30,7 +30,7 @@ module: {
         }
     },
     {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|pdf)$/,
         use: [
           {
             loader: 'file-loader',

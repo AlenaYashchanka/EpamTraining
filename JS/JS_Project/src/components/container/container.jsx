@@ -9,6 +9,7 @@ import { appStore } from './../../store/'
 // import compponents
 import ViewPublicCatalog from '../../views/view-public-catalog.jsx'
 import Input from './../input/input.jsx'
+import { About } from '../../views/veiw-about/view-about.jsx'
 import { Dropdown } from './../dropdown/dropdown.jsx'
 import { Menu } from './../menu/menu.jsx'
 import { Button } from './../button-advanced/button.jsx'
@@ -79,7 +80,7 @@ class App extends Component {
             <Route
               path={`/about`}
               render={props => (
-                <Catalog myCatalog={this.state.displayedItems} {...props} />
+                <About />
               )}
             />
           </Switch>

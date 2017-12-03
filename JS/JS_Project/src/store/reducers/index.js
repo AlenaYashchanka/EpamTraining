@@ -6,6 +6,7 @@ import { currencySearchReducer } from './currency-search.reducer';
 import { retailerSearchReducer } from './retailer-search.reducer';
 import { brandSearchReducer } from './brand-search.reducer'
 import { itemsReducer } from './itemsReducer'
+import { showItemReducer } from './show-item.reducer'
 
 export const appReducers = combineReducers({
     menu: menuReducer,
@@ -14,5 +15,6 @@ export const appReducers = combineReducers({
     currencysearch: currencySearchReducer,
     retailersearch: retailerSearchReducer,
     brandsearch: brandSearchReducer,
-    items: itemsReducer
+    items: itemsReducer,
+    showItem: showItemReducer
 });

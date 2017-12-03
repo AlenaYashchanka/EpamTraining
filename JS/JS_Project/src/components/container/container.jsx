@@ -8,7 +8,7 @@ import { appStore } from './../../store/'
 
 // import compponents
 import ViewPublicCatalog from '../../views/view-public-catalog/view-public-catalog.jsx'
-import { ViewItem } from '../../views/view-item/view-item.jsx'
+import ViewItem from '../../views/view-item/view-item.jsx'
 import Input from './../input/input.jsx'
 import { About } from '../../views/veiw-about/view-about.jsx'
 import { Dropdown } from './../dropdown/dropdown.jsx'

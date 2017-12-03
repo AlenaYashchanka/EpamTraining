@@ -1,73 +1,21 @@
+.fashion-main-page{
+    margin-left: 46px;
+    min-width: 1300px;
+}
 
+.wrapper--small-width{
+    margin-left: 140px;
+}
 
 * {
     font-family: Segoe print;
-    color: grey;
     margin: 0;
     
-}
-
-.fa {
-    height: 20px;
-    display: block;
-    z-index: 2;
-    width: 20px;
 }
 
 .fashion {
     display: flex;
     width: 100%;
-}
-.menu-item{
-    display: flex;
-}
-
-.menu-item__label{
-    display: block;
-}
-
-.menu-item__label-hidden {
-    display: none;
-    width: 0px;
-}
-.fashion-menu{
-    position: fixed;
-    height: 100%;
-    font-size: 20px;
-    padding-top: 20px;
-    background-color: #E9E5E5;
-}
-.menu-item__image--logo{
-    background: url('./images/bag.jpg') no-repeat;
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}
-
-.menu-item__image--public-catalog{
-    background: url('./images/folder1.jpg') no-repeat;
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}
-
-.menu-item:hover {
-    cursor: pointer;
-    background-color: rgb(148, 148, 240);
-    border-radius: 10px;
-}
-.menu-item__label:hover{
-    color: white;
-}
-
-.menu-item__label{
-    width: 100%;
-}
-.main-page{
-    margin-left: 150px;
-    max-width: 80%;
 }
 
 .head-items {
@@ -105,10 +53,10 @@
     background-color: black;
     opacity: 0.7;
     border-radius: 20px;
-    height: 320px;
+    height: 120px;
     width: 250px;
     position: absolute;
-    top: 0px;
+    top: 200px;
     left: 0;
     right: 0;
     display: none;
@@ -144,6 +92,8 @@
     position: absolute;
     color: black;
     border: 1px solid blue;
+    background-color: white;
+    z-index: 3;
 }
 
 .form-wrapper{

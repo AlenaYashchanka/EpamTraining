@@ -12,7 +12,7 @@ export class About extends Component {
     render () {
       return (
         <div className = "main-page main-page--about">
-            <div className = "main-page__header-about">About</div>
+            <div className = "main-page__header-about"> About </div>
             <div className = "main-page__content-about content-about">
                 <div className = "content-about__author">This application designed by Alena Yashchanka</div>
                 <div className = "content-about__download-title">Specifications could be downloaded from link below</div>

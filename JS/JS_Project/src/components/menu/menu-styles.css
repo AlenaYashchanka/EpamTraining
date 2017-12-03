@@ -1,0 +1,63 @@
+.fashion-menu{
+    position: fixed;
+    height: 100%;
+    font-size: 18px;
+    padding-top: 20px;
+    background-color: white;
+    border-right: 1px solid black;
+}
+
+.menu-item{
+    margin: 8px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+
+.menu-item__label{
+    display: block;
+    color: black;
+    width: 100%;
+}
+
+.menu-item__label:hover{
+    color: white;
+}
+
+.menu-item__label-hidden {
+    display: none;
+    width: 0px;
+}
+
+.menu-item__image{
+    width: 25px;
+    height: 25px;
+    margin: 4px 5px 0 0;
+}
+
+.menu-item__image--logo{
+    background: url('../../images/bag.jpg') no-repeat;    
+}
+
+.menu-item__image--public-catalog{
+    background: url('../../images/folder1.jpg') no-repeat;
+}
+
+.menu-item__image--private-catalog{
+    background: url('../../images/folder1.jpg') no-repeat;
+}
+
+.menu-item__image--favourites{
+    background: url('../../images/folder1.jpg') no-repeat;
+}
+
+.menu-item__image--about{
+    background: url('../../images/folder1.jpg') no-repeat;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    background-color: rgb(148, 148, 240);
+    border-radius: 10px;
+}

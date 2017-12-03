@@ -7,7 +7,8 @@ import Items from './../../response-data-export.json'
 import { appStore } from './../../store/'
 
 // import compponents
-import ViewPublicCatalog from '../../views/view-public-catalog.jsx'
+import ViewPublicCatalog from '../../views/view-public-catalog/view-public-catalog.jsx'
+import { ViewItem } from '../../views/view-item/view-item.jsx'
 import Input from './../input/input.jsx'
 import { About } from '../../views/veiw-about/view-about.jsx'
 import { Dropdown } from './../dropdown/dropdown.jsx'
@@ -30,67 +31,34 @@ import {
 class App extends Component {
   constructor (props) {
     super(props)
-    this.state = { displayedItems: Items.response.results }
-    this.updateItems = this.updateItems.bind(this)
-  }
-
-  updateItems (a) {
-    this.setState({ displayedItems: a })
-  }
-
-  updatePrice () {
-    let sumPrice = 0
-    this.state.displayedItems.forEach(el => {
-      sumPrice += el.object.metadata.price
-    })
-    return sumPrice
   }
 
   render () {
     return (
       <Router>
         <div className='fashion'>
-          <div
-            className={[
-              'fashion-menu',
-              'fashion-menu__width',
-              this.props.isOpenedMenu && 'fashion-menu__width--big-width'
-            ].join(' ')}
-          >
+          <div className="fashion-menu">
             <Menu
               menuCollapsed={this.props.menuCollapsed}
               openMenu={this.props.isOpenedMenu}
             />
           </div>
-
-          <Switch>
-            <Route exact path='/' render={props => <ViewPublicCatalog />} />
-            <Route
-              path={`/private-catalog`}
-              render={props => (
-                <Catalog myCatalog={this.state.displayedItems} {...props} />
-              )}
-            />
-            <Route
-              path={`/favourites`}
-              render={props => (
-                <Catalog myCatalog={this.state.displayedItems} {...props} />
-              )}
-            />
-            <Route
-              path={`/about`}
-              render={props => (
-                <About />
-              )}
-            />
-          </Switch>
+          <div className = "fashion-main-page">
+            <div className={['main-page-wrapper', this.props.isOpenedMenu && 'wrapper--small-width'].join(' ')}>
+              <Switch>
+                  <Route exact path='/' render={props => <ViewPublicCatalog />} />
+                  <Route path='/private-catalog' render={props => (<ViewPublicCatalog  />)}/>
+                  <Route path='/favourites' render={props => (<ViewPublicCatalog  />)}/>
+                  <Route path='/about' render={props => (<About />)}/>
+                  <Route path='/discover' render={props => ( <ViewItem />)}/>       
+              </Switch>
+            </div>
+          </div>
         </div>
       </Router>
     )
   }
 }
-
-// ReactDOM.render(<App/>, document.getElementById('container'));
 
 const mapStateToProps = state => {
     const isOpenedMenu = state.menu.isOpened

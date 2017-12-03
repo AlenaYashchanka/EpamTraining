@@ -1,24 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import Items from './../../response-data-export.json';
-
-class Item extends React.Component {
-    
-    render() {
-        
-        return(
-            <div className = "catalog-item ">
-                <img className = "catalog-item__image" src = {this.props.image}/>
-                <div className = "catalog-item-wrapper">
-                    <p className = "catalog-item__text">{this.props.title}</p>   
-                    <p className = "catalog-item__cost">{this.props.price}</p>
-                    <input type = "button" className = "catalog-item__discover" value = "Discover"/>
-                    <input type = "button" className = "catalog-item__add-to-private" value = "Add to Private"/>
-                </div>
-            </div>
-        )
-    }
-}
+import { Item } from '../item/item.jsx'
 
 export class Catalog extends React.Component {
     constructor(props){

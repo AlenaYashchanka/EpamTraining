@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { menuCollapsed } from './../store/actions/'
-import Items from './../response-data-export.json'
-import { appStore } from './../store/'
-import { simpleSearch } from '../store/actions/'
-import { searchPrice } from '../store/actions/'
+import { menuCollapsed } from './../../store/actions/'
+import Items from './../../response-data-export.json'
+import { appStore } from './../../store/'
+import { simpleSearch } from '../../store/actions/'
+import { searchPrice } from '../../store/actions/'
 
 
 // import compponents
-import { Input } from './../components/input/input.jsx'
-import { Dropdown } from './../components/dropdown/dropdown.jsx'
-import { Menu } from './../components/menu/menu.jsx'
-import Button from './../components/button-advanced/button.jsx'
-import { Basket } from './../components/basket/basket.jsx'
-import { Catalog } from './../components/catalog/catalog.jsx'
+import { Input } from './../../components/input/input.jsx'
+import { Dropdown } from './../../components/dropdown/dropdown.jsx'
+import { Menu } from './../../components/menu/menu.jsx'
+import Button from './../../components/button-advanced/button.jsx'
+import { Basket } from './../../components/basket/basket.jsx'
+import { Catalog } from './../../components/catalog/catalog.jsx'
 import {
   BrowserRouter as Router,
   Route,
@@ -25,7 +25,8 @@ import {
 } from 'react-router-dom'
 
 // import css-styles
-import '../app.css'
+import '../../app.css'
+import './view-public-catalog-styles.css'
 
 // create DOM
 
@@ -36,22 +37,26 @@ class ViewPublicCatalog extends Component {
 
   render () {
     return (
-      <div className='main-page main-page--public'>
-        <div className='head-items'>
-          <Input
-            simpleSearch={this.props.simpleSearch}
-          /> 
-          <Button /> 
-          <Dropdown />
+      <div className='main-page'>
+        <div className = 'main-page__head-wrapper'>
+          <div className='main-page__head-items'>
+            <Dropdown />
+            <Input
+              simpleSearch={this.props.simpleSearch}
+            /> 
+            <Button /> 
+          </div>
+          <div className='basket'>
+            <Basket
+              countItemsValue={this.props.countItems}
+              countPrice={this.props.countPrice}
+            />
+          </div>
         </div>
-        <div className='basket'>
-          <Basket
-            countItemsValue={this.props.countItems}
-            countPrice={this.props.countPrice}
-          />
+        <div className = "main-page__catalog-wrapper">
+          <h3 className = "main-page__catalog-title">Shop styles</h3>
+          <Catalog myCatalog={this.props.items} />
         </div>
-        <h3>Shop styles</h3>
-        <Catalog myCatalog={this.props.items} />
       </div>
     )
   }

@@ -7,18 +7,13 @@ import {
     Link
   } from 'react-router-dom'
 
+import './menu-styles.css'
+
 export class Menu extends React.Component {
     
     constructor(props) {
 		super(props);
-		/*this.state = {class: 'menu-item__label'};
-		this.onHandleClick = this.onHandleClick.bind(this);*/
 	}
-
-	/*onHandleClick() {
-		let className = this.state.class === 'menu-item__label' ? 'menu-item__label menu-item__label-hidden' : 'menu-item__label';
-        this.setState({class: className});
-	}*/
 
     render() {
         return (
@@ -36,11 +31,11 @@ export class Menu extends React.Component {
                     <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Private Catalog</div>
                 </NavLink>
                 < NavLink to="/favourites" activeClassName="menu-item--active" className="menu-item">
-                    <div className ="menu-item__image menu-item__image--heading"></div>
+                    <div className ="menu-item__image menu-item__image--favourites"></div>
                     <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>Favourites</div>
                 </NavLink>
                 < NavLink to="/about" activeClassName="menu-item--active" className="menu-item">
-                    <div className ="menu-item__image menu-item__image"></div>
+                    <div className ="menu-item__image menu-item__image--about"></div>
                     <div className={['menu-item__label', !this.props.openMenu && 'menu-item__label-hidden'].join(' ')}>About</div>
                 </NavLink>
             </div>

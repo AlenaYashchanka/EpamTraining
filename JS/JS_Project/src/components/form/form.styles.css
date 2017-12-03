@@ -1,0 +1,19 @@
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-firstline-wrapper, .form-secondline-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__currency, .form__price, .form__retailer, .form__brand{
+    width: 150px;
+    margin: 15px;
+}
+
+.form__title{
+    margin: 10px 0 10px 35px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './basket.syles.css'
 
 export class Basket extends React.Component {
     constructor(props) {

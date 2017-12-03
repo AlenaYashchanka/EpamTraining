@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Item  from '../item/item.jsx'
-import './catalog.styles.css'
 
-export class Catalog extends React.Component {
+export class FavouriteCatalog extends React.Component {
     constructor(props){
       super(props);
     }
@@ -13,7 +12,7 @@ export class Catalog extends React.Component {
         return (
                 <div className = "fashion__catalog catalog-wrapper">
                     {
-                    catalogItems.map(function(el, index) {return <Item key = {index} title = {el.object.metadata.title} price = {el.object.metadata.price} image = {el.object.image.url}/>})
+                    catalogItems.map(function(el, index) {return <Item key = {index} title = {el.title} price = {el.price} image = {el.image}/>})
                     }
                 </div>
         );

@@ -8,7 +8,9 @@ import {
   } from 'react-router-dom'
 
 import { showDetailedInfo } from './../../store/actions/show-item.actions';
+import { addToFavourites } from './../../store/actions/add-to-favourites.actions.js';
 import { connect } from 'react-redux'
+import './item.styles.css'
 
 class Item extends React.Component {
     constructor (props) {
@@ -23,6 +25,17 @@ class Item extends React.Component {
         this.props.showDetailedInfo(srcValue)
     }
     
+    onBtnClick(){
+        let imgValue = this.props.image;
+        let titleValue = this.props.title;
+        let priceValue = this.props.price;
+        let arrFavourite = {image: imgValue, title: titleValue, price: priceValue};
+        console.log('===============================');
+        console.log("FAVOURITES", arrFavourite);
+        console.log('===============================');
+        this.props.addToFavourites(arrFavourite)
+    }
+
     render() {
         
         return(
@@ -33,7 +46,7 @@ class Item extends React.Component {
                 <div className = "catalog-item-wrapper">
                     <p className = "catalog-item__text">{this.props.title}</p>   
                     <p className = "catalog-item__cost">{this.props.price}</p>
-                    <input type = "button" className = "catalog-item__add-to-private" value = "Add to favourites"/>
+                    <input type = "button" className = "catalog-item__add-to-private" value = "Add to favourites" onClick = {this.onBtnClick.bind(this)}/>
                 </div>
             </div>
         )
@@ -43,7 +56,8 @@ class Item extends React.Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    showDetailedInfo: showItem => dispatch(showDetailedInfo(showItem))
+    showDetailedInfo: showItem => dispatch(showDetailedInfo(showItem)),
+    addToFavourites: addFavourit => dispatch(addToFavourites(addFavourit))
   })
 
 export default connect(null, mapDispatchToProps)(Item)

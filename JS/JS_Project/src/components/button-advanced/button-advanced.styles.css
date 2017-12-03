@@ -1,0 +1,23 @@
+
+.fashion-advansed-search__button{
+    width: 80px;
+    margin: 0 150px 0 50px;
+}
+
+.fashion-advansed-search__form {
+    display: none;
+}
+
+
+
+.fashion-advansed-search__form--show-form {
+    display: block;
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    color: black;
+    border: 1px solid blue;
+    background-color: white;
+    z-index: 3;
+}

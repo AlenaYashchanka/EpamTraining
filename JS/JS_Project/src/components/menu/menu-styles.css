@@ -8,7 +8,7 @@
 }
 
 .menu-item{
-    margin: 8px;
+    margin: 12px 15px;
     display: flex;
     text-decoration: none;
     color: black;
@@ -19,6 +19,7 @@
     display: block;
     color: black;
     width: 100%;
+    margin-left: 10px;
 }
 
 .menu-item__label:hover{
@@ -31,33 +32,56 @@
 }
 
 .menu-item__image{
-    width: 25px;
-    height: 25px;
-    margin: 4px 5px 0 0;
+    width: 40px;
+    height: 30px;
 }
 
 .menu-item__image--logo{
-    background: url('../../images/bag.jpg') no-repeat;    
+    background: url('../../images/bag.jpg') no-repeat;  
+    width: 40px;
+    height: 30px;  
 }
 
 .menu-item__image--public-catalog{
     background: url('../../images/folder1.jpg') no-repeat;
+    width: 40px;
+    height: 30px; 
 }
 
 .menu-item__image--private-catalog{
-    background: url('../../images/folder1.jpg') no-repeat;
+    background: url('../../images/folder2.jpg') no-repeat;
+    width: 40px;
+    height: 30px; 
 }
 
 .menu-item__image--favourites{
-    background: url('../../images/folder1.jpg') no-repeat;
+    background: url('../../images/folder3.jpg') no-repeat;
+    width: 40px;
+    height: 30px; 
 }
 
 .menu-item__image--about{
-    background: url('../../images/folder1.jpg') no-repeat;
+    background: url('../../images/folder4.jpg') no-repeat;
+    width: 40px;
+    height: 30px; 
 }
 
 .menu-item:hover {
     cursor: pointer;
     background-color: rgb(148, 148, 240);
     border-radius: 10px;
+}
+
+.menu-item__sign{
+    display: none;
+}
+
+.menu-item__sign--show{
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: red;
+    z-index: 2;
+    position: absolute;
+    left: 20px;
 }

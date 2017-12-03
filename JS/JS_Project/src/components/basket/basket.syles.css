@@ -1,0 +1,17 @@
+.fashion__basket-wrapper{
+    display: flex;
+}
+
+.fashion-counter{
+    padding: 20px;
+    margin-left: 55px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    font-size: 15px;
+}
+
+.fashion-counter__number{
+    align-self: center;
+}

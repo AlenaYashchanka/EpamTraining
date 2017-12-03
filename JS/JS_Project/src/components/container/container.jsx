@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { menuCollapsed } from './../../store/actions/'
+import { addToFavourites } from './../../store/actions/'
+import { hideSignFavourites } from './../../store/actions/'
 import Items from './../../response-data-export.json'
 import { appStore } from './../../store/'
 
 // import compponents
 import ViewPublicCatalog from '../../views/view-public-catalog/view-public-catalog.jsx'
 import ViewItem from '../../views/view-item/view-item.jsx'
+import ViewFavourites from '../../views/view-favourites/view-favourites.jsx'
 import Input from './../input/input.jsx'
 import { About } from '../../views/veiw-about/view-about.jsx'
 import { Dropdown } from './../dropdown/dropdown.jsx'
@@ -41,6 +44,8 @@ class App extends Component {
             <Menu
               menuCollapsed={this.props.menuCollapsed}
               openMenu={this.props.isOpenedMenu}
+              showSign={this.props.isAddFafourite}
+              hideSign={this.props.hideSignFavourites}
             />
           </div>
           <div className = "fashion-main-page">
@@ -48,7 +53,7 @@ class App extends Component {
               <Switch>
                   <Route exact path='/' render={props => <ViewPublicCatalog />} />
                   <Route path='/private-catalog' render={props => (<ViewPublicCatalog  />)}/>
-                  <Route path='/favourites' render={props => (<ViewPublicCatalog  />)}/>
+                  <Route path='/favourites' render={props => (<ViewFavourites  />)}/>
                   <Route path='/about' render={props => (<About />)}/>
                   <Route path='/discover' render={props => ( <ViewItem />)}/>       
               </Switch>
@@ -61,14 +66,21 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-    const isOpenedMenu = state.menu.isOpened
+    const isOpenedMenu = state.menu.isOpened;
+    const isAddFafourite = state.addFafourit.isClicked;
+    const isHideSign = state.addFafourit.isClicked
     return {
-      isOpenedMenu
+      isOpenedMenu,
+      isAddFafourite,
+      isHideSign
     }
   }
 
 const mapDispatchToProps = dispatch => ({
-  menuCollapsed: () => dispatch(menuCollapsed())
+  menuCollapsed: () => dispatch(menuCollapsed()),
+  hideSignFavourites: () => dispatch(hideSignFavourites()),
+  addToFavourites: () => dispatch(addToFavourites())
+  
 })
 
 // export const Root = connect(mapStateToProps, mapDispatchToProps)(App);

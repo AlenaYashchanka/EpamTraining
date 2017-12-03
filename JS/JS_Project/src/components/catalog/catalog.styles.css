@@ -1,0 +1,5 @@
+
+.fashion__catalog {
+    display: flex;
+    flex-wrap: wrap;
+}

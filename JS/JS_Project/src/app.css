@@ -1,17 +1,23 @@
+* {
+    font-family: Segoe print;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .fashion-main-page{
-    margin-left: 46px;
-    min-width: 1300px;
+    margin-left: 65px;
+    width: 100%;
 }
 
 .wrapper--small-width{
     margin-left: 140px;
 }
 
-* {
-    font-family: Segoe print;
-    margin: 0;
-    
-}
+
+
+
 
 .fashion {
     display: flex;
@@ -23,93 +29,4 @@
     justify-content: space-around;
     padding: 20px 40px;
 }
-.fashion__basket-wrapper{
-    display: flex;
-}
 
-.fashion-counter{
-    padding: 20px;
-}
-
-.fashion__catalog {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.catalog-item{
-    margin: 40px;
-    border-radius: 20px;
-    position: relative;
-}
-
-.catalog-item__image{
-    width: 250px;
-    height: 320px;
-    border-radius: 20px;
-}
-
-.catalog-item-wrapper{
-    color: white;
-    background-color: black;
-    opacity: 0.7;
-    border-radius: 20px;
-    height: 120px;
-    width: 250px;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    right: 0;
-    display: none;
-    transition-property: background-color;
-    transition-duration: 5s;
-}
-
-.catalog-item:hover .catalog-item-wrapper{
-    display: block;
-    cursor: pointer;
-    background-color: black;
-    transition-property: background-color;
-    transition-duration: 5s;
-    transition-delay: 2s;
-}
-
-.fashion-advansed-search__button{
-    width: 80px;
-    margin: 0 150px 0 50px;
-}
-
-.fashion-advansed-search__form {
-    display: none;
-}
-
-
-
-.fashion-advansed-search__form--show-form {
-    display: block;
-    height: 200px;
-    width: 400px;
-    margin: 0 auto;
-    position: absolute;
-    color: black;
-    border: 1px solid blue;
-    background-color: white;
-    z-index: 3;
-}
-
-.form-wrapper{
-    display: flex;    
-}
-
-.form-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-firstline-wrapper, .form-secondline-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.catalog-item__image {
-    position: relative;
-}

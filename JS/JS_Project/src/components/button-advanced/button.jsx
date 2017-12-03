@@ -8,6 +8,7 @@ import { searchPrice } from '../../store/actions'
 import { searchCurrency } from '../../store/actions'
 import { searchRetailer } from '../../store/actions'
 import { searchBrand } from '../../store/actions'
+import './button-advanced.styles.css'
 
 
 class Button extends React.Component {

@@ -7,6 +7,7 @@ import { retailerSearchReducer } from './retailer-search.reducer';
 import { brandSearchReducer } from './brand-search.reducer'
 import { itemsReducer } from './itemsReducer'
 import { showItemReducer } from './show-item.reducer'
+import { addTofavouritesReducer } from './add-to-favourites.reducer'
 
 export const appReducers = combineReducers({
     menu: menuReducer,
@@ -16,5 +17,6 @@ export const appReducers = combineReducers({
     retailersearch: retailerSearchReducer,
     brandsearch: brandSearchReducer,
     items: itemsReducer,
-    showItem: showItemReducer
+    showItem: showItemReducer,
+    addFafourit: addTofavouritesReducer
 });

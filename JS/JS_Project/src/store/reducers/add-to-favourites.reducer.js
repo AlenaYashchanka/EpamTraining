@@ -1,18 +1,22 @@
 import { ADD_TO_FAVOURITES } from './../actions/';
 import { HIDE_SIGN_FAVOURITES } from './../actions/';
 
-const initialState = {
-    state: 'INITIAL',
-    favouritesItems: [],
-    isClicked: false
+let arrFavourites = JSON.parse(localStorage.getItem('favourites'))
+if (!arrFavourites){
+    arrFavourites = []
 }
 
-let arrFavourites = []
+const initialState = {
+    state: 'INITIAL',
+    favouritesItems: arrFavourites,
+    isClicked: false
+}
 
 export function addTofavouritesReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_TO_FAVOURITES:
             arrFavourites.push(action.payload);
+            localStorage.setItem('favourites', JSON.stringify(arrFavourites))
             console.log('===============================');
             console.log("ARRFAVOURITES", arrFavourites);
             console.log('===============================');

@@ -1,0 +1,28 @@
+
+.cv-top-panel-links {
+    display: flex;
+    justify-content: center;
+}
+
+.cv-top-panel-links__link {
+    margin: 40px 25px 5px 10px;
+    text-transform: uppercase;
+    color: rgb(103, 105, 118);
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cv-top-panel-links__link:hover {
+    color: rgb(228, 174, 88);
+}
+
+.cv-top-panel-links__link--footer {
+    margin-bottom: 120px;
+    color: rgb(137, 137, 137);
+}
+
+.cv-top-panel-links__link--footer:hover {
+    color: rgb(137, 137, 137);
+    transform: scale(2);
+}

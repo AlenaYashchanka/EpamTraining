@@ -1,0 +1,42 @@
+
+.cv-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    background-color: rgb(233, 113, 76);
+    color: white;
+}
+
+.cv-form__caption {
+    font-size: 30px;
+    margin: 20px 0 10px 30px;
+}
+
+.cv-form__annotation {
+    font-size: 12px;
+    margin: 0 0 10px 30px;
+}
+
+.cv-form__input {
+    border: none;
+    border-bottom: 1px solid yellow;
+    background-color: rgb(233, 113, 76);
+    color: white;
+    margin: 20px 0 0 30px;
+    width: 90%;
+}
+
+.cv-form__input--textarea {
+    height: 50px;
+}
+
+.cv-form__button {
+    font-size: 12px;
+    border-radius: 14px;
+    margin: 35px 350px 30px 45px;
+    padding: 8px 0;
+    border: none;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+}
+

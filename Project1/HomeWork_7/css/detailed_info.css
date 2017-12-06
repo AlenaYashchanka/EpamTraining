@@ -1,0 +1,19 @@
+
+.cv-detailed-info {
+    flex: 1 1 25%;
+    height: 300px;
+    align-self: center;
+    min-width: 200px;
+}
+
+.cv-detailed-info__caption {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.cv-detailed-info__text {
+    font-size: 0.7em;
+    margin: 20px;
+    text-align: center;
+}
+

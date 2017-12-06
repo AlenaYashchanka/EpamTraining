@@ -23,9 +23,10 @@ import {
 } from 'react-router-dom'
 
 // import css-styles
+
 import '../../app.css'
-import '../view-public-catalog/view-public-catalog-styles.css'
 import './view-favourites.styles.css'
+
 
 // create DOM
 
@@ -37,7 +38,7 @@ class ViewFavourites extends Component {
   render () {
     return (
       <div className='main-page'>
-        <div className = 'main-page__head-wrapper'>
+        <div className = 'main-page__head-wrapper main-page__head-wrapper--favourites'>
           <div className='main-page__head-items'>
             <Input
               simpleSearch={this.props.simpleSearch}

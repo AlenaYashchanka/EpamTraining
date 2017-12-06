@@ -1,0 +1,55 @@
+.cv-page{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Assistant', sans-serif;
+}
+
+
+.cv-page__first-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cv-page__second-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cv-page__third-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cv-page__fourth-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cv-page__fifth-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cv-page__sixth-line {
+    display: flex;
+    width: 100%;
+}
+
+.cv-page__seventh-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cv-page__eighth-line {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    background-color: white;
+}

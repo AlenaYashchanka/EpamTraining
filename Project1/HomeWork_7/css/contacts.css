@@ -1,0 +1,30 @@
+
+.cv-contacts {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    background-color: black;
+    color: white;
+}
+
+.cv-contacts__caption {
+    font-size: 18px;
+    margin: 30px 0 15px 30px;
+}
+
+.cv-contacts__address {
+    font-size: 11px;
+    margin: 0 0 15px 30px;
+    color: rgb(137, 137, 137);
+}
+
+.cv-contacts__contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.cv-contacts__contact-info {
+    font-size: 12px;
+    color: rgb(137, 137, 137);
+    margin: 15px 0 0 30px;
+}

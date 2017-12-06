@@ -1,0 +1,285 @@
+
+.cv-page__main-image{
+    flex: 1 1 50%;
+    /*height: 100%;*/
+    background: url(images/5.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.cv-page__Stimulus {
+    position: absolute;
+    margin: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.cv-page__about-myself-wrapper {
+    flex: 1 1 50%;
+    background-color: rgb(240, 226, 215); 
+}
+
+.cv-about-myself__annotation {
+    font-size: 0.6em;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    color: rgb(161, 159, 160);
+    text-transform: uppercase;
+    margin: 120px 0 0 40px;
+}
+
+.cv-about-myself__caption {
+    font-size: 1.8em;
+    font-weight: lighter;
+    color: rgb(53, 61, 72);
+    margin: 20px 0 0 40px;
+    padding: 0 15px 0 0;
+}
+
+.cv-about-myself__text {
+    font-size: 0.8em;
+    line-height: 1.7;
+    color: rgb(161, 159, 160);
+    margin-left: 45px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.cv-about-myself__button {
+    margin: 45px 0 50px 45px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 0.6em;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    background-color: transparent;
+}
+
+/* -----------------SECOND  ------------------------  */
+
+.cv-page__general-info {
+    flex: 1 1 50%;
+    background-color: rgb(255, 255, 255);
+    min-width: 450px;
+}
+
+.cv-general-info__caption {
+    font-size: 1.8em;
+    margin: 15px 0 0 30px;
+}
+
+.cv-general-info__annotation {
+    color: rgb(236, 173, 156);
+    font-size: 1em;
+    margin: 15px 0 0 30px;
+}
+
+.cv-general-info__text {
+    color: rgb(137, 163, 178);
+    font-size: 1em;
+    margin: 15px 10px 20px 30px;
+}
+
+
+.cv-page__image-skills {
+    flex: 1 1 25%;
+    height: 300px;
+    background: url(images/1.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.cv-skills__info {
+    flex: 1 1 25%;
+    background-color: rgb(228, 174, 88);
+}
+
+
+.cv-my-skills-info__caption {
+    font-size: 20px;
+    color: white;
+    margin: 40px 0 0 40px;
+}
+
+.cv-my-skills-info__languages {
+    font-size: 0.6em;
+    font-weight: bolder;
+    color: white;
+    margin: 20px 0 20px 40px;
+}
+
+.cv-my-skill__container {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.cv-my-skills-info__item {
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: black;
+}
+
+.cv-my-skills-info__measure {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+    align-self: flex-end;
+}
+
+.cv-my-skills-info__progress {
+    background-color: white; 
+    border: 0;
+    height: 1.5px;
+    width: 200px;
+    margin: -20px 0 10px 40px;
+}
+
+/*----------------------------THIRD----------------------*/
+
+.cv-page__detailed-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cv-page__detailed-info--orange {
+    background-color: rgb(228, 174, 88);
+}
+
+.cv-page__detailed-info--red {
+    background-color: rgb(233, 113, 76);
+}
+
+.cv-page__detailed-info--black {
+    background-color: rgb(22, 22, 22);
+}
+
+.cv-page__detailed-info--white {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+/*------------------------------FOURTH------------------------------------*/
+
+.cv-page__middle-image {
+    flex: 1 1 50%;
+    height: 100%;
+    background-position: 50% 0;
+    background-size: cover;  
+}
+
+.cv-page__middle-image--experience {
+    background: url(images/4.jpg);
+}
+
+.cv-page__experience-and-education{
+    flex: 1 1 50%;
+}
+
+.cv-page__experience-and-education--red {
+    background-color: rgb(233, 113, 76);
+}
+
+.cv-experience-and-education__caption {
+    font-size: 1.8em;
+    color: white;
+    margin: 20px 0 0 45px;
+}
+
+.cv-experience-and-education__annotation {
+    font-size: 0.9em;
+    color: white;
+    margin: 15px 0 30px 45px;
+}
+
+.cv-experience-and-education__wrapper {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    margin-left: 45px;
+}
+
+.cv-experience-and-education__position {
+    color: white;
+    font-size: 1.5em;
+    margin:  0 0 5px 20px;
+}
+
+.cv-experience-and-education__position--period {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: rgb(103, 49, 49);
+    margin-left: 3px;
+} 
+
+.cv-experience-and-education__description {
+    font-size: 12px;
+    color: white;
+    margin: 0 0 20px 100px;
+}
+
+/*----------------------------FIFTH------------------------------*/
+.cv-page__middle-image--education {
+    background: url(images/3.jpg);
+}
+
+.cv-page__experience-and-education--yellow {
+    background-color: rgb(228, 174, 88);
+}
+
+/*----------------------------SIXTH--------------------------------*/
+
+.cv-page__detailed-info--bg-image {
+    background-image: url(images/6.jpg);
+    flex: 1 1 100%;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.cv-detailed-info__caption--big-text {
+    font-size: 1.8em;
+    padding: 0 100px;
+}
+
+.cv-detailed-info__text--small-text {
+    font-size: 0.7em;
+}
+
+/*--------------------------------------------SEVENTH-------------------------------------*/
+
+.cv-page__bottom-image {
+    flex: 1 1 25%;
+    background-image: url(images/2.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+
+}
+
+.cv-contact-info__detailed-info {
+    margin-left: 10px;
+}
+
+.cv-contact-info__detailed-info--yellow {
+    color: rgb(228, 174, 88);
+}
+/*-------------------------------EIGHTH-------------*/
+
+.cv-page__copyright {
+    font-size: 0.8em;
+    text-align: center;
+    color: rgb(137, 137, 137);
+    margin: 120px 0 0 0;
+}
+
+.cv-page__copyright--orange {
+    color: rgb(228, 174, 88);
+}

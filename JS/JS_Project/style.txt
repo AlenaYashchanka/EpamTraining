@@ -1,0 +1,11 @@
+body {
+    margin: 9px 9px 0 9px;
+    padding: 0;
+    background: #FFF;
+}
+
+#level0 {
+     background:#FC0;
+}
+
+

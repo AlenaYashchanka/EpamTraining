@@ -2,6 +2,7 @@ var webdriverio = require('webdriverio');
 var request = require ('request');
 var rp = require('request-promise');
 var expect = require('chai').expect;
+//var should = require('chai').should();
 
 const options = {
     uri: 'https://jsonplaceholder.typicode.com/users',
@@ -36,9 +37,3 @@ describe ('Http request', () => {
 
     
 });
-/*
-function responseSuccess (response) {
-    expect(response.statusCode).to.equal(200); 
-    expect(response.headers['content-type']).to.equal('application/json; charset=utf-8');
-}
-*/

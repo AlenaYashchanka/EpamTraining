@@ -1,18 +1,5 @@
 var webdriverio = require('webdriverio');
-var options = { desiredCapabilities: { browserName: 'firefox' } };
-var client = webdriverio.remote(options);
 var assert = require('assert');
-
-/*
-describe ('webdriverIO page', function(){
-    it ('Should have the right title', function(){
-        browser.url('http://webdriver.io');
-        var title = browser.getTitle();
-        assert.equal(title, 'WebdriverIO - WebDriver bindings for Node.js')
-    });
-
-});
-*/
 
 describe ('Yandex mail', function(){ 
     it('should display an error message', function(done) {
@@ -27,7 +14,7 @@ describe ('Yandex mail', function(){
         browser.call(done);
     });
 
-    it ('Send e-mail', async function(done){
+    it ('should send e-mail', async function(done){
         browser
             .url('http://mail.yandex.ru')
             .click('.button2_theme_mail-white');
